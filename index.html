@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Review Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #440052;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #540064;
+        }
+        p{
+            font-size: x-small;
+
+        }
+
+        #logo {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        #logo img {
+            max-width: 150px;
+            max-height: 75px;
+        }
+        .Header{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    
+        
+
+        <div class="Header">
+
+            <h2>App Review Form</h2>    
+        </div>
+        
+        <form id="reviewForm">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="surname">Surname</label>
+            <input type="text" id="surname" name="surname" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="review">Review :
+                <p>Note:On this Section please share your app experience with the Adminstrators and also share your ideas that can improve the application
+
+                </p>
+            </label>
+            <textarea id="review" name="review" rows="5" required></textarea>
+            
+            <button type="submit">Submit Review</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('reviewForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Review submitted successfully!');
+            // Here you can add code to handle form submission,
+            // like sending the data to a server using AJAX or Fetch API.
+        });
+    </script>
+</body>
+</html>
